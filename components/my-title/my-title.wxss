@@ -1,0 +1,58 @@
+/* components/my-title/my-title.wxss */
+.my-title
+{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: white;
+}
+.logo
+{
+    flex: 7;
+}
+.serach
+{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.user
+{
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.down-app
+{
+    flex: 3;
+    font-size: 30rpx;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background-color: pink;
+    color: #ffffff;
+    border-radius: 10rpx;
+    padding: 10rpx;
+}
+
+.logo image
+{
+    width: 140rpx;
+    height: 60rpx;
+}
+
+.serach image
+{
+    width: 60rpx;
+    height: 44rpx;
+}
+
+.user image
+{
+    width: 54rpx;
+    height: 60rpx;
+}

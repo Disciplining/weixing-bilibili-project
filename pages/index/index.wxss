@@ -1,0 +1,18 @@
+.nav
+{
+    white-space: nowrap;
+    padding: 5rpx 0rpx;
+}
+
+.nav .nav-item
+{
+    color: #666;
+    padding: 20rpx 45rpx;
+    font-size: 30rpx;
+    display: inline-block;
+}
+
+.active
+{
+    border-bottom: red 2px solid;
+}

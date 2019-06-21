@@ -1,0 +1,17 @@
+<view class="my-title">
+    <navigator class="logo">
+        <image class="logo-image" src="../../icon/logo-1.png" mode="aspectFit"></image>
+    </navigator>
+
+    <view class="serach">
+        <image class="logo-image" src="../../icon/search.png" mode="aspectFit"></image>
+    </view>
+
+    <view class="user">
+        <image class="logo-image" src="../../icon/user.png" mode="aspectFit"></image>
+    </view>
+
+    <view class="down-app">
+        下载APP
+    </view>
+</view>
