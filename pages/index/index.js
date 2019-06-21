@@ -1,6 +1,40 @@
 Page
 (
 	{
+        /**
+         * 独轮播图数据
+         */
+        getWiperList: function()
+        {
+            let that = this;
+            wx.request
+            (
+                {
+                    url: 'https://easy-mock.com/mock/5c1dfd98e8bfa547414a5278/bili/swiperList',
+                    success: (result) =>
+                    {
+                        if(result.data.code == 0)
+                        {
+                            console.log(result.data.data.swiperList);
+
+                            that.setData
+                            (
+                                {
+                                    swiperList: result.data.data.swiperList
+                                }
+                            );
+                        }
+                    },
+                    fail: () => 
+                    {
+                        console.log('请求失败');
+                    },
+                    complete: () =>
+                    {}
+                }
+            );
+        },
+
 		/**
 		 * 获得首页导航数据
 		 */
@@ -35,7 +69,6 @@ Page
 
 		activeNav: function(e)
 		{
-            console.log(e);
 			this.setData
 			(
 				{
@@ -49,7 +82,8 @@ Page
 		 */
 		data: 
 		{
-			currentIndexNav: 0
+			currentIndexNav: 0,
+            swiperList: []
 		},
 	
 		/**
@@ -58,6 +92,7 @@ Page
 		onLoad: function (options) 
 		{
 			this.getNavList();
+            this.getWiperList();
 		},
 	
 		/**
