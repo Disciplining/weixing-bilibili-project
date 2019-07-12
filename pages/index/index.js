@@ -2,7 +2,7 @@ Page
 (
 	{
         /**
-         * 独轮播图数据
+         * ajx请求独轮播图数据
          */
         getWiperList: function()
         {
@@ -15,7 +15,7 @@ Page
                     {
                         if(result.data.code == 0)
                         {
-                            console.log(result.data.data.swiperList);
+                            // console.log(result.data.data.swiperList);
 
                             that.setData
                             (
@@ -36,7 +36,7 @@ Page
         },
 
 		/**
-		 * 获得首页导航数据
+		 * ajax请求首页导航数据
 		 */
 		getNavList: function()
 		{
@@ -67,6 +67,45 @@ Page
 			);
 		},
 
+        /**
+         * ajax请求视频数据
+         */
+        getVideosList: () =>
+        {
+            let that = this;
+            wx.request
+            (
+                {
+                    url: 'https://easy-mock.com/mock/5c1dfd98e8bfa547414a5278/bili/videosList',
+                    success: (result) => 
+                    {
+                        console.log('请求到的数据', result);
+
+                        // if (result.data.code == 0) 
+                        // {
+                        //     console.log(result.data.data.swiperList);
+
+                        //     that.setData
+                        //     (
+                        //         {
+                        //             swiperList: result.data.data.swiperList
+                        //         }
+                        //     );
+                        // }
+                    },
+                    fail: () => 
+                    {
+                        console.log('请求失败');
+                    },
+                    complete: () => { }
+                }
+            );
+        },
+
+        /**
+         * 这个函数
+         * 点击导航条时，下边的样式跟着改变
+         */
 		activeNav: function(e)
 		{
 			this.setData
@@ -93,6 +132,7 @@ Page
 		{
 			this.getNavList();
             this.getWiperList();
+            this.getVideosList();
 		},
 	
 		/**
