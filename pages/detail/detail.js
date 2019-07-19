@@ -5,8 +5,9 @@ Page
         /**
          * 页面的初始数据
          */
-        data: {
-
+        data: 
+        {
+			videoInfo:{}
         },
 
         /**
@@ -14,56 +15,89 @@ Page
          */
         onLoad: function (options) 
         {
-            console.log(options);
+            let id = options.id;
+            this.getCurrentVides(id);
         },
 
         /**
          * 生命周期函数--监听页面初次渲染完成
          */
-        onReady: function () {
-
+        onReady: function () 
+        {
         },
 
         /**
          * 生命周期函数--监听页面显示
          */
-        onShow: function () {
-
+        onShow: function () 
+        {
         },
 
         /**
          * 生命周期函数--监听页面隐藏
          */
-        onHide: function () {
-
+        onHide: function () 
+        {
         },
 
         /**
          * 生命周期函数--监听页面卸载
          */
-        onUnload: function () {
-
+        onUnload: function () 
+        {
         },
 
         /**
          * 页面相关事件处理函数--监听用户下拉动作
          */
-        onPullDownRefresh: function () {
-
+        onPullDownRefresh: function () 
+        {
         },
 
         /**
          * 页面上拉触底事件的处理函数
          */
-        onReachBottom: function () {
-
+        onReachBottom: function ()
+        {
         },
 
         /**
          * 用户点击右上角分享
          */
-        onShareAppMessage: function () {
+        onShareAppMessage: function () 
+        {
+        },
 
+        /**
+         * 根据视频id获取视频详情
+         */
+        getCurrentVides: function(videoId)
+        {
+			let that = this;
+
+            wx.request
+            (
+                {
+                    url: 'https://easy-mock.com/mock/5c1dfd98e8bfa547414a5278/bili/videoDetail?id=' + videoId,
+                    success: (res)=>
+                    {
+                        console.log('请求成功', res);
+						if(res.data.code === 0)
+						{
+							that.setData
+							(
+								{
+									videoInfo: res.data.data.videoInfo
+								}
+							);
+						}
+                    },
+                    fail: ()=>
+                    {
+                        console.log('请求失败');
+                    }
+                }
+            );
         }
     }
 )

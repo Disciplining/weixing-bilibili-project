@@ -1,4 +1,9 @@
 <view class="main">
     <!-- 公共头部 -->
     <my-title></my-title>
+
+	<view wx:for="{{videoInfo}}" wx:key="{{index}}">
+			{{index}}:{{item}}
+	</view>
+
 </view>
