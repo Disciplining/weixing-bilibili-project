@@ -87,7 +87,7 @@ Page
                                     videosList: result.data.data.videosList
                                 }
                             );
-                            console.log('数据', result.data.data.videosList);
+                            // console.log('数据', result.data.data.videosList);
                         }
                     },
                     fail: () => 
