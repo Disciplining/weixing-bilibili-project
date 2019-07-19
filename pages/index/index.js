@@ -70,7 +70,7 @@ Page
         /**
          * ajax请求视频数据
          */
-        getVideosList: () =>
+        getVideosList: function()
         {
             let that = this;
             wx.request
@@ -79,19 +79,16 @@ Page
                     url: 'https://easy-mock.com/mock/5c1dfd98e8bfa547414a5278/bili/videosList',
                     success: (result) => 
                     {
-                        console.log('请求到的数据', result);
-
-                        // if (result.data.code == 0) 
-                        // {
-                        //     console.log(result.data.data.swiperList);
-
-                        //     that.setData
-                        //     (
-                        //         {
-                        //             swiperList: result.data.data.swiperList
-                        //         }
-                        //     );
-                        // }
+                        if (result.data.code == 0) 
+                        {
+                            that.setData
+                            (
+                                {
+                                    videosList: result.data.data.videosList
+                                }
+                            );
+                            console.log('数据', result.data.data.videosList);
+                        }
                     },
                     fail: () => 
                     {
@@ -122,7 +119,8 @@ Page
 		data: 
 		{
 			currentIndexNav: 0,
-            swiperList: []
+            swiperList: [],
+            videosList: []
 		},
 	
 		/**

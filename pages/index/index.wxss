@@ -38,3 +38,18 @@
     width: 100%;
     height: 100%;
 }
+
+/* 视频列表 */
+.videf_wrap
+{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5rxp;
+    justify-content: space-between;
+}
+
+.videf_wrap .video_item
+{
+    width: 48%;
+    margin-bottom: 20rpx;
+}
