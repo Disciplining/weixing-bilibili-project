@@ -19,4 +19,22 @@
 		</view>
 	</view>
 
+    <!-- 推荐视频 -->
+    <view class="others_list">
+
+        <navigator class="item_other" wx:for="{{othersList}}" wx:key="{{index}}"> <!-- 每一条推荐视频 -->
+            <view class="other_img_wrap"> <!-- 左边的图片 -->
+                <image src="{{item.imgSrc}}" mode="widthFix"></image>
+            </view>
+            <view class="other_info"> <!-- 右边的视频信息 -->
+                <view class="other_title">{{item.title}}</view>
+                <view class="other_detail">
+                    <text class="play_count">{{item.playMsg}}次观看</text>
+                    <text class="comment_count">{{item.commentCount}}弹幕</text>
+                </view>
+            </view>
+        </navigator>
+    </view>
+
+
 </view>
