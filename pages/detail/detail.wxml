@@ -36,5 +36,33 @@
         </navigator>
     </view>
 
+    <!-- 视频评论 -->
+    <view class="comment_wrap">
+
+        <view class="comment_title">
+            评论 ( {{commentData.commentTotalCount}} )
+        </view>
+
+        <view class="comment_list">
+
+            <view class="comment_item" wx:for="{{commentData.commentList}}"> <!-- 每一条评论 -->
+                <view  class="comment_user"> <!-- 左侧用户头像 -->
+                    <image src="{{item.userIconSrc}}" mode="widthFix"></image>
+                </view>
+
+                <view class="comment_info"> <!-- 右侧用户评论的其他信息 -->
+                    <view class="comment_detail">
+                        <text class="author">{{item.username}}</text>
+                        <text class="date">{{item.commentDate}}</text>
+                    </view>
+                    <view class="comment_content">
+                        {{item.commentInfo}}
+                    </view>
+                </view>
+            </view>
+
+        </view>
+
+    </view>
 
 </view>
