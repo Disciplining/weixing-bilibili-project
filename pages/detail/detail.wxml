@@ -4,7 +4,7 @@
 
 	<!-- 视频详情 -->
 	<view class="video_info">
-		<video src="../../static/test-video.mp4" controls></video> <!-- 视频 -->
+		<video src="http://www.w3school.com.cn/example/html5/mov_bbb.mp4" controls></video> <!-- 视频 -->
 
 		<view class="video_title"> <!-- 视频标题 -->
 			<text>{{videoInfo.videoTitle}}</text>
