@@ -6,8 +6,8 @@
 
 #### 界面展示
 
-<img src="https://images.gitee.com/uploads/images/2019/0721/111616_af65a7ac_2255764.jpeg" height="30%" />
+<img src="https://images.gitee.com/uploads/images/2019/0721/111616_af65a7ac_2255764.jpeg" width="30%" height="30%" />
 <br/>
-<img src="https://images.gitee.com/uploads/images/2019/0721/112434_cf2ba9eb_2255764.jpeg" height="30%" />
+<img src="https://images.gitee.com/uploads/images/2019/0721/112434_cf2ba9eb_2255764.jpeg" width="30%" height="30%" />
 <br/>
-<img src="https://images.gitee.com/uploads/images/2019/0721/112526_81009d20_2255764.jpeg" height="30%" />
+<img src="https://images.gitee.com/uploads/images/2019/0721/112526_81009d20_2255764.jpeg" width="30%" height="30%" />
